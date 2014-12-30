@@ -1,0 +1,12 @@
+javascripts:
+  src: ./app/index.js
+  dist: ./public/bundle.js
+  uglify: false
+  react: true
+  es6: true
+styles:
+  src: ./app/stylus/index.styl
+  dist: ./public/stylesheets/app.css
+  minify: false
+  normalize: true
+  fontawesome: true

@@ -1,0 +1,6 @@
+javascripts:
+  dist: ./public/bundle.min.js
+  uglify: true
+styles:
+  dist: ./public/stylesheets/app.min.css
+  minify: true

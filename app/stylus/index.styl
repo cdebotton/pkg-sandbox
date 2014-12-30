@@ -1,0 +1,78 @@
+@import 'nib'
+@import 'jeet'
+@import 'rupture'
+
+*,
+*::before,
+*::after
+  box-sizing border-box
+
+html
+  font-size 62.5%
+
+html,
+body
+  margin 0
+
+.todo-app
+  center(128rem)
+  cf()
+
+.new-todo
+  cf()
+  input,
+  button
+    height 4rem
+    font-size 1.4rem
+    padding 0 1rem
+  input
+    col(9/12)
+    border 0
+    border-bottom 1px solid #ccc
+  button
+    col(3/12)
+    background-color #eee
+    border none
+    text-align center
+
+.tool, .snapshot
+  col(1/2)
+  +below(64rem)
+    stack()
+
+.tool
+  font-size 2rem
+
+.todo-list
+  list-style none
+  margin 1rem 0
+  padding 0
+  li
+    padding 1rem
+    border-bottom 1px solid #ccc
+    cf()
+    .task-name
+      font-size 1.4rem
+      text-transform uppercase
+      col(2/3)
+    input
+      col(1/6)
+    button
+      col(1/6)
+      font-size 1rem
+      text-align center
+      background-color black
+      color #fff
+      font-weight 100
+      border none
+      padding 0.6rem
+
+.snapshot
+  font-size 1.4rem
+  .key
+    color green
+    font-weight bold
+  .string
+    color blue
+  .boolean
+    color red

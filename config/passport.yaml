@@ -1,0 +1,18 @@
+facebook:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
+twitter:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
+tumblr:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
+github:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
+google:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
+linkedin:
+  CLIENT_ID: null
+  CLIENT_SECRET: null
