@@ -6,6 +6,8 @@ import {List, fromJS} from 'immutable';
 var TODOS = Symbol('todos');
 var ID_PROPERTY = 0;
 
+console.log(TodosAdapter);
+
 class TodoStore {
   constructor() {
     this.todos = List();
