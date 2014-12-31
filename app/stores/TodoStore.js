@@ -1,4 +1,5 @@
 import {flux} from 'Fluxd';
+import TodosAdapter from '../adapters/TodosAdapter';
 import TodoActionCreators from '../actions/TodoActionCreators';
 import {List, fromJS} from 'immutable';
 

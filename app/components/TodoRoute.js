@@ -1,6 +1,7 @@
 import React from 'react';
 import {StoreListenerMixin} from 'Fluxd';
 import TodoStore from '../stores/TodoStore';
+import TodosAdapter from '../adapters/TodosAdapter';
 import NewTodo from './NewTodo';
 import TodoList from './TodoList';
 import Snapshot from './Snapshot';
