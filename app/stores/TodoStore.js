@@ -6,18 +6,21 @@ import {List, fromJS} from 'immutable';
 var TODOS = Symbol('todos');
 var ID_PROPERTY = 0;
 
-console.log(TodosAdapter);
-
 class TodoStore {
   constructor() {
     this.todos = List();
     this.bindActions(TodoActionCreators);
+    this.bindActions(TodosAdapter);
   }
 
   onCreateTodo(data) {
     var id = `TODO_${++ID_PROPERTY}`;
     this.todos = this.todos
       .concat([fromJS({id: id, task: data, completed: false})]);
+  }
+
+  onSave(data) {
+    console.log(data);
   }
 
   onDestroyTodo(id) {

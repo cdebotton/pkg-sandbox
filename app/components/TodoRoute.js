@@ -9,6 +9,12 @@ import Snapshot from './Snapshot';
 var TodoRoute = React.createClass({
   mixins: [StoreListenerMixin],
 
+  statics: {
+    fetchData() {
+      return TodosAdapter.find();
+    }
+  },
+
   getInitialState() {
     var {todos} = TodoStore.getState();
     return {todos: todos, completed: TodoStore.getCompleted()};
