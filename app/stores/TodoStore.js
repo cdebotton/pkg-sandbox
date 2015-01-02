@@ -19,7 +19,7 @@ class TodoStore {
       .concat([fromJS({id: id, task: data, completed: false})]);
   }
 
-  onSave(data) {
+  onSaveTodos(data) {
     console.log(data);
   }
 
