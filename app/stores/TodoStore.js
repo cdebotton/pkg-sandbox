@@ -1,4 +1,4 @@
-import {flux} from 'Fluxd';
+import flux from '../flux';
 import TodosAdapter from '../adapters/TodosAdapter';
 import TodoActionCreators from '../actions/TodoActionCreators';
 import {List, fromJS} from 'immutable';
@@ -19,8 +19,9 @@ class TodoStore {
       .concat([fromJS({id: id, task: data, completed: false})]);
   }
 
-  onSaveTodos(data) {
-    console.log(data);
+  onFindTodos(data) {
+    data = Array.isArray(data) ? data : [data];
+    this.todos = this.todos.concat(fromJS(data));
   }
 
   onDestroyTodo(id) {

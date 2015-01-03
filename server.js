@@ -1,6 +1,5 @@
 var KoaReact = require('koa-react').KoaReact;
 var Config = require('koa-react').Config;
-var flux = require('fluxd').flux;
 var ApiV1 = require('./api').ApiV1;
 var app = new KoaReact();
 

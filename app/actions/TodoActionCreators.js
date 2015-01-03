@@ -1,4 +1,4 @@
-import {flux} from 'Fluxd';
+import flux from '../flux';
 
 class TodoActionCreators {
   constructor() {

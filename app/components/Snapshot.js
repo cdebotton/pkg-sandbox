@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import {flux} from 'Fluxd';
+import flux from '../flux';
 
 var Snapshot = React.createClass({
   highlightSyntax(json) {

@@ -3,14 +3,6 @@ import {RouteHandler, Link} from 'react-router';
 import Promise from 'bluebird';
 
 var App = React.createClass({
-  statics: {
-    fetchData(params, query) {
-      return Promise.resolve({
-        data: 'test'
-      });
-    }
-  },
-
   render() {
     var livereload = `document.write('<script src="http://' ` +
       `+ (location.host || 'localhost').split(':')[0] + ` +

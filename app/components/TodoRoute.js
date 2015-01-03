@@ -21,6 +21,7 @@ var TodoRoute = React.createClass({
   },
 
   componentWillMount() {
+    TodosAdapter.save();
     this.listenTo(TodoStore, this.onChange);
   },
 
@@ -29,12 +30,20 @@ var TodoRoute = React.createClass({
   },
 
   render() {
+    var todos = (() => {
+      if (TodoStore.isPending()) {
+        return 'Loading...';
+      }
+      else {
+        return <TodoList todos={this.state.todos} />;
+      }
+    })();
     return (
       <div className="todo-app">
         <div className="tool">
           <h1>Todos</h1>
           <NewTodo />
-          <TodoList todos={this.state.todos} />
+          {todos}
           <div className="controls">
             <span>Completed: {this.state.completed.size}</span>
           </div>

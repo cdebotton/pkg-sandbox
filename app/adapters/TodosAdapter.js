@@ -1,4 +1,4 @@
-import {flux} from 'fluxd';
+import flux from '../flux';
 
 class TodosAdapter {
   constructor() {
