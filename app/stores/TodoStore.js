@@ -3,9 +3,6 @@ import TodosAdapter from '../adapters/TodosAdapter';
 import TodoActionCreators from '../actions/TodoActionCreators';
 import {List, fromJS} from 'immutable';
 
-var TODOS = Symbol('todos');
-var ID_PROPERTY = 0;
-
 class TodoStore {
   constructor() {
     this.todos = List();
@@ -14,9 +11,10 @@ class TodoStore {
   }
 
   onCreateTodo(data) {
-    var id = `TODO_${++ID_PROPERTY}`;
+    var id = nextID(this.todos);
+    var taskName = data || `Task ${this.todos.size + 1}`;
     this.todos = this.todos
-      .concat([fromJS({id: id, task: data, completed: false})]);
+      .concat([fromJS({id: id, task: taskName, completed: false})]);
   }
 
   onFindTodos(data) {
@@ -39,6 +37,10 @@ class TodoStore {
   static getCompleted() {
     return this.getState().todos.filter(todo => todo.get('completed') === true);
   }
+};
+
+var nextID = (todos) => {
+  return `TODO_${todos.size + 1}`;
 };
 
 export default flux.createStore(TodoStore);

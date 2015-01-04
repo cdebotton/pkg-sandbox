@@ -4,15 +4,15 @@ export default function(Api) {
   Api.get('/todos', function *() {
     this.body = [{
       id: 'TODO_1',
-      task: 'Go down to the farmers market',
+      task: 'Task 1',
       completed: false
     }, {
       id: 'TODO_2',
-      task: 'Get some plums',
+      task: 'Task 2',
       completed: false
     }, {
       id: 'TODO_3',
-      task: 'So juicy',
+      task: 'Task 3',
       completed: false
     }];
   });

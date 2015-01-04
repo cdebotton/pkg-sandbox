@@ -21,7 +21,6 @@ var TodoRoute = React.createClass({
   },
 
   componentWillMount() {
-    TodosAdapter.save();
     this.listenTo(TodoStore, this.onChange);
   },
 
