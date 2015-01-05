@@ -1,7 +1,13 @@
 import Router from 'koa-router';
 
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
 export default function(Api) {
   Api.get('/todos', function *() {
+    yield delay(350);
+
     this.body = [{
       id: 'TODO_1',
       task: 'Task 1',

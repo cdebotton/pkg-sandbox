@@ -1,3 +1,6 @@
-driver: mongodb
-port: 27017
+username: root
+password: root
 database: pruno-test
+host: 127.0.0.1
+dialect: pg
+models: ./api/models

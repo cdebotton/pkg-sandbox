@@ -19,7 +19,11 @@ class TodoStore {
 
   onFindTodos(data) {
     data = Array.isArray(data) ? data : [data];
-    this.todos = this.todos.concat(fromJS(data));
+
+    var existingTasks = this.todos.map(task => task.get('id'));
+    var tasks = data.filter(task => existingTasks.indexOf(task.id) === -1);
+
+    this.todos = this.todos.concat(fromJS(tasks));
   }
 
   onDestroyTodo(id) {
